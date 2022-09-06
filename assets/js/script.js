@@ -396,10 +396,10 @@ const leituraElement = document.querySelector('#leitura')
 const botaoLimpar = document.querySelector('#limpar')
 botaoLimpar.addEventListener('click', limparCartas)
 var lista = []
-function criarNumero(){
-    while(true){
+function criarNumero() {
+    while (true) {
         let numero = Math.floor(Math.random() * Object.keys(dicionario).length);
-        if(lista.includes(numero) == false){
+        if (lista.includes(numero) == false) {
             return numero
         }
     }
@@ -411,18 +411,22 @@ function carta() {
         cartaAleatoria.disabled = true;
     }
     const cartaElement = document.createElement('div')
-    cartaElement.innerHTML = `<div class="titulo">${dicionario[`${numero+1}`].titulo}</div>
+    cartaElement.innerHTML = `<div class="titulo">${dicionario[`${numero + 1}`].titulo}</div>
         <div class="descricao">
-            <div class="img"><img src="${dicionario[`${numero+1}`].imagem}" alt="o-hierofante"></div>
-            <div class="texto">${dicionario[`${numero+1}`].geral}</div>
+            <div class="img"><img src="${dicionario[`${numero + 1}`].imagem}" alt="o-hierofante"></div>
+            <div class="texto">${dicionario[`${numero + 1}`].geral}</div>
         </div>`
 
     cartaElement.classList.add('carta')
     leituraElement.appendChild(cartaElement)
+    document.getElementById('mesa-minima').style.display = 'none'
+    document.getElementById('leitura').style.display = 'grid'
     lista.push(numero)
 }
 function limparCartas() {
     leituraElement.innerHTML = '';
     cartaAleatoria.disabled = false;
     lista = [];
+    document.getElementById('mesa-minima').style.display = 'block'
+    document.getElementById('leitura').style.display = 'none'
 }
