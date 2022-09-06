@@ -31,8 +31,20 @@ body {
 }
 
 .cartas{
-    width: 100vw;
-    height: 30vh;
+    width: 30vw;
+    height: 25vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ajude {
+    width: 40vw;
+    color: white;
+    text-align: right;
 }
 
 #mesa-minima{
@@ -82,5 +94,25 @@ body {
     #leitura {
       display: flex !important;
       flex-direction: column;
+      width: 100vw;
+    }
+    #mesa-minima {
+        display: none !important;
+    }
+    .container {
+        margin: 0;
+        width: 100%;
+    }
+    .cartas {
+        height: 20vh;
+        width: 50vw;
+    }
+    #carta-aleatoria {
+        height: 120px;
+    }
+    .ajude {
+        width: 50vw;
+        margin-right: 10px;
+        font-size: 12px;
     }
   } 
