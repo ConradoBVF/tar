@@ -393,9 +393,10 @@ var dicionario = {
 const cartaAleatoria = document.querySelector('#carta-aleatoria')
 cartaAleatoria.addEventListener('click', carta)
 const leituraElement = document.querySelector('#leitura')
-const botaoLimpar = document.querySelector('#limpar')
+const botaoLimpar = document.querySelector('#embaralhar')
 botaoLimpar.addEventListener('click', limparCartas)
 var lista = []
+
 function criarNumero() {
     while (true) {
         let numero = Math.floor(Math.random() * Object.keys(dicionario).length);
