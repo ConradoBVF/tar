@@ -11,9 +11,42 @@ body {
     margin: 0 10%;
 }
 
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0fr;
+    width: 100%;
+}
+
+
+.explicacao {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.explicacao p {
+    margin-bottom: 0;
+}
+
+.ajude {
+    color: white;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.cartas {
+    display: flex;
+    justify-content: flex-end;
+}
+
 #carta-aleatoria {
-    width: 80px;
-    height: 150px;
+    height: 120px;
     background-color: #b85b54;
     border-radius: 10px;
     margin: 10px;
@@ -25,26 +58,17 @@ body {
     cursor: pointer;
 }
 
+#embaralhar {
+    height: 120px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
 .btn {
     width: 100%;
     height: 100%;
-}
-
-.cartas{
-    width: 30vw;
-    height: 25vh;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.ajude {
-    width: 40vw;
-    color: white;
-    text-align: right;
 }
 
 #mesa-minima{
@@ -65,6 +89,8 @@ header {
     border-radius: 25px;
     border: 7px solid #29141f;
 }
+
+
 
 .carta {
     color: white;
@@ -90,7 +116,12 @@ header {
     margin-bottom: 15px;
 }
 
-@media screen and (max-width: 600px) {
+.responsivo {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 700px) {
     #leitura {
       display: flex !important;
       flex-direction: column;
@@ -103,16 +134,21 @@ header {
         margin: 0;
         width: 100%;
     }
-    .cartas {
-        height: 20vh;
-        width: 50vw;
-    }
     #carta-aleatoria {
         height: 120px;
     }
     .ajude {
-        width: 50vw;
         margin-right: 10px;
         font-size: 12px;
+        width: 40vw;
     }
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    .responsivo {
+        display: flex;
+        justify-content: space-between;
+    }
+
   } 
